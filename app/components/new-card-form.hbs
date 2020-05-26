@@ -1,0 +1,15 @@
+<div class="list-footer">
+{{#if showForm}}
+  <form {{on "submit" this.saveCard}}>
+      <Input class="form-control" placeholder="New Card Title" @value={{this.title}} autofocus={{true}} />
+    <button class="btn fullwidth btn-hidden" type="submit">Submit</button>
+  </form>
+
+{{else}}
+
+    <button class="btn btn-text" type="button" {{on "click" toggleForm}}>
+      <span class="fa fa-plus"></span>
+      Add new card...
+    </button>
+{{/if}}
+</div>

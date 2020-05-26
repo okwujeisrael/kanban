@@ -170,17 +170,12 @@ label + .form-control {
   color: #fff;
 }
 
-/* .btn-delete, */
+.btn-delete,
 .btn-text {
   width: auto;
   background: none;
   padding: 0;
   color: #4a6064;
-}
-
-.btn-delete {
-  color: #4a6064;
-  border: 1px solid #4a6064;
 }
 
 .btn-back {

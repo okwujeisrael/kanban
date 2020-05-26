@@ -1,0 +1,12 @@
+<div class="list-form">
+  <h2>Add List</h2>
+
+  <form {{on "submit" this.save}}>
+    <Input placeholder="List Name" class="form-control" @value={{this.list}} required={{true}} />
+    <Input placeholder="Card Title" class="form-control" @value={{this.title}} required={{true}} />
+    
+    <button class="fullwidth btn btn-save" type="submit">Save</button>
+
+  </form>
+
+</div>

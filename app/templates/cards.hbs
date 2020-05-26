@@ -1,0 +1,25 @@
+<div class="board">
+  {{#each-in (group-by "list" @model) as |list cards|}}
+    <ul 
+      class="list" 
+      {{on "drop" (fn this.updateCard list)}} 
+      {{on "dragover" this.draggedOver}}
+      
+    >
+      <li class="list-header">{{list}}</li>
+      
+      {{#each cards as |card|}}
+        <li 
+          class="card" draggable="true" 
+          {{on "dragstart" (fn this.beginDrag card)}} 
+        >
+          <LinkTo @route="cards.detail" @model={{card.id}}>{{card.title}}</LinkTo>
+        </li>
+      {{/each}}
+      <NewCardForm @list={{list}}/>
+    </ul>
+  {{/each-in}}
+  
+  <NewListForm />
+</div>
+{{outlet}}
