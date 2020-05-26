@@ -14,6 +14,7 @@ export default class CardsDetailController extends Controller {
   
   @action 
   async deleteCard(e) {
+    debugger;
     e.preventDefault();
     await this.model.destroyRecord();
     this.transitionToRoute('cards');
